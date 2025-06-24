@@ -3,31 +3,14 @@ import React, { useState } from "react";
 export default function About() {
   const [myStyle, setMyStyle] = useState({
     color: 'black',
-    backgroundColor: 'white'
+    backgroundColor: '#e6e6ff'
   });
 
-  const [btnText, setBtnText] = useState("Enable Dark Mode");
-
-  const toggleStyle = () => {
-    if (myStyle.color === 'black') {
-      setMyStyle({
-        color: 'white',
-        backgroundColor: 'black',
-        border: '1px solid white'
-      });
-      setBtnText("Enable Light Mode");
-    } else {
-      setMyStyle({
-        color: 'black',
-        backgroundColor: 'white'
-      });
-      setBtnText("Enable Dark Mode");
-    }
-  };
+  
 
   return (
-    <div className="container my-4" style={myStyle}>
-      <h1 className="mx-3 my-4">About Us</h1>
+    <div className="container my-8" style={myStyle}>
+      <h1 className="mx-8 my-8">About Us</h1>
       <div className="accordion accordion-flush" id="accordionFlushExample">
         <div className="accordion-item">
           <h2 className="accordion-header" id="flush-headingOne">
@@ -40,7 +23,7 @@ export default function About() {
               aria-controls="flush-collapseOne"
               style={myStyle}
             >
-              Accordion Item #1
+              <strong>Analyze Your text</strong>
             </button>
           </h2>
           <div
@@ -50,9 +33,7 @@ export default function About() {
             data-bs-parent="#accordionFlushExample"
           >
             <div className="accordion-body">
-              Placeholder content for this accordion, which is intended to
-              demonstrate the <code>.accordion-flush</code> className. This is
-              the first item's accordion body.
+           Textutils gives you a way to analyze your text quickly and efficiently
             </div>
           </div>
         </div>
@@ -68,7 +49,7 @@ export default function About() {
               aria-controls="flush-collapseTwo"
               style={myStyle}
             >
-              Accordion Item #2
+             <strong>Free to use</strong>
             </button>
           </h2>
           <div
@@ -78,9 +59,7 @@ export default function About() {
             data-bs-parent="#accordionFlushExample"
           >
             <div className="accordion-body">
-              Placeholder content for this accordion, which is intended to
-              demonstrate the <code>.accordion-flush</code> className. This is
-              the second item's accordion body.
+              TextUtils is a free character counter tool that provides instant character count & word count statistics for a given text. TextUtils reports the number of words and characters. Thus it is suitable for writing text with word/ character limit.
             </div>
           </div>
         </div>
@@ -96,7 +75,7 @@ export default function About() {
               aria-controls="flush-collapseThree"
               style={myStyle}
             >
-              Accordion Item #3
+             <strong>Browser Compatible</strong> 
             </button>
           </h2>
           <div
@@ -105,21 +84,15 @@ export default function About() {
             aria-labelledby="flush-headingThree"
             data-bs-parent="#accordionFlushExample"
           >
-            <div className="accordion-body">
-              Placeholder content for this accordion, which is intended to
-              demonstrate the <code>.accordion-flush</code> className. This is
-              the third item's accordion body.
+            <div className="accordion-body ">
+             This word counter software works in any web browsers such as Chrome, Firefox, Internet Explorer, Safari, Opera. It suits to count characters in facebook, blog, books, excel document, pdf document, essays, etc.
+
+
             </div>
           </div>
         </div>
       </div>
-      <button
-        type="button"
-        className="btn btn-dark mx-3 my-4"
-        onClick={toggleStyle}
-      >
-        {btnText}
-      </button>
+
     </div>
   );
 }
